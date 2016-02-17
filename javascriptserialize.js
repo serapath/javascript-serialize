@@ -1,9 +1,10 @@
 'use strict'
 var type = require('component-type')
 var CircularJSON = require('circular-json')
-var domserialize = require('dom-serialize')
-var stringify = require('fnjson').stringify
+var domserialize = process.browser ? require('dom-serialize') : noop
+var stringify = require('fnjson/source/node_modules/_stringify')
 
+function noop () {}
 var m = 'Converting circular structure to JSON'
 
 module.exports = javascriptserialize
