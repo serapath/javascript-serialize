@@ -1,7 +1,9 @@
 'use strict'
 var type = require('component-type')
 var CircularJSON = require('circular-json')
-var domserialize = process.browser ? require('dom-serialize') : noop
+var domserialize = typeof window !== 'undefined' ?
+  require('dom-serialize')
+  : noop
 var stringify = require('fnjson/source/node_modules/_stringify')
 
 function noop () {}
