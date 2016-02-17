@@ -1,0 +1,25 @@
+{
+  "name": "javascript-serialize",
+  "version": "1.0.0",
+  "description": "stringify all kinds of js values",
+  "main": "javascriptserialize",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serapath/javascript-serialize.git"
+  },
+  "keywords": [
+    "javascript",
+    "serialize",
+    "stringify",
+    "json"
+  ],
+  "author": "serapath <dev@serapath.de> (http://www.github.com/serapath)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/serapath/javascript-serialize/issues"
+  },
+  "homepage": "https://github.com/serapath/javascript-serialize#readme"
+}
