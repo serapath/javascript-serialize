@@ -33,8 +33,6 @@ function javascriptserialize () {
         } catch (e) {}
       }
       item = item+''
-    } finally {
-      return item
-    }
+    } finally { return item }
   })
 }
