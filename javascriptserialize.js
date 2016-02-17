@@ -18,8 +18,10 @@ function javascriptserialize () {
       if (type(item) === 'arguments') item = [].slice.call(item)
       else if (type(item) === 'element') item = domserialize(item)
       else if (type(item) === 'nan') item = 'NaN'
+      // @TODO: is it possible to enrich error messages?
       else if (type(item) === 'error') item = 'Error: '+item.message
       else if (type(item) === 'regexp') item = item+''
+      for(var i in item) if (!item.hasOwnProperty(i)) item[i] = item[i]
       x = JSON.parse(stringify(item))
       x = CircularJSON.stringify(x)
       if (x === undefined) throw new Error()
