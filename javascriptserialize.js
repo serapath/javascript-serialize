@@ -22,7 +22,6 @@ function javascriptserialize () {
         item._message = item.message
         item._stack = item.stack
         item._name = item.name
-        debugger
       }
       var x = JSON.parse(stringify(item))
       x = CircularJSON.stringify(x)

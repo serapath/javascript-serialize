@@ -1,6 +1,6 @@
 {
   "name": "javascript-serialize",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "stringify all kinds of js values",
   "main": "javascriptserialize",
   "scripts": {
