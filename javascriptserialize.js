@@ -18,6 +18,12 @@ function javascriptserialize () {
       else if (type(item) === 'element') item = domserialize(item)
       else if (type(item) === 'nan') item = 'NaN'
       else if (type(item) === 'regexp') item = item+''
+      else if (type(item) === 'error') {
+        item._message = item.message
+        item._stack = item.stack
+        item._name = item.name
+        debugger
+      }
       var x = JSON.parse(stringify(item))
       x = CircularJSON.stringify(x)
       if (x === undefined) throw new Error()
